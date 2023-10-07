@@ -36,13 +36,13 @@ img {
   max-width: 100%;
 }
 
-header {
+header .inner-content {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
   padding-left: 2em;
-  padding-right: 2em;
+  padding-right: 2em; 
   padding-top: 3em;
 }
 
@@ -66,7 +66,7 @@ header #menu li {
   font-size: var(--font-size-lg);
 }
 
-#valentines {
+#valentines .inner-content {
   display: flex;
   flex-direction: column;
  
@@ -215,6 +215,10 @@ footer {
 }
 
 @media (min-width: 960px) {
+  header .inner-content {
+    padding-left: 1em;
+    padding-right: 1em;
+  }
 #previews {
   grid-template-areas: 
   "p1 p2"
@@ -223,7 +227,7 @@ footer {
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 1fr;
 }
-#valentines {
+#valentines .inner-content {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 1.5em;
@@ -272,4 +276,16 @@ button {
   grid-template-columns: 1fr 1fr 1fr 1fr;
   gap: .7em;
 }
+}
+
+@media (min-width: 1280px) {
+  .inner-content {
+    max-width: 960px;
+  margin-left: auto;
+  margin-right:auto;
+  }
+  header .inner-content {
+    padding-left: 0;
+    padding-right: 0;
+  }
 }
