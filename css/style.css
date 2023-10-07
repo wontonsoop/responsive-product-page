@@ -1,5 +1,11 @@
-:root {
-
+:root { 
+  --font-size-sm: clamp(0.8rem, 0.17vw + 0.76rem, 0.89rem);
+  --font-size-base: clamp(1rem, 0.34vw + 0.91rem, 1.19rem);
+  --font-size-md: clamp(1.25rem, 0.61vw + 1.1rem, 1.58rem);
+  --font-size-lg: clamp(1.56rem, 1vw + 1.31rem, 2.11rem);
+  --font-size-xl: clamp(1.95rem, 1.56vw + 1.56rem, 2.81rem);
+  --font-size-xxl: clamp(2.44rem, 2.38vw + 1.85rem, 3.75rem);
+  --font-size-xxxl: clamp(3.05rem, 3.54vw + 2.17rem, 5rem);
 }
 
 * {
@@ -18,6 +24,7 @@ html {
   color: #222;
   scroll-behavior: smooth;
   line-height: 1.4;
+  font-size: var(--font-size-base);
 }
 
 body {
@@ -29,5 +36,184 @@ img {
   max-width: 100%;
 }
 
+header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 2em;
+  padding-right: 2em;
+  padding-top: 3em;
+}
 
+section {
+  padding-top: 5em;
+  padding-bottom: 5em;
+  padding-left: 2em;
+  padding-right: 2em;
 
+}
+
+header #menu ul {
+ text-transform: uppercase;
+ list-style: none;
+ display: flex; 
+ flex-direction: row;
+}
+
+header #menu li {
+  padding-right: 15px;
+  font-size: var(--font-size-lg);
+}
+
+#valentines {
+  display: flex;
+  flex-direction: column;
+ 
+}
+
+#valentines img {
+  border-radius: 1em;
+}
+
+#previews {
+  display: grid;
+  grid-template-areas: 
+    "p1 p1 p1"
+    "p2 p3 p4";
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: .65fr .35fr;
+  gap: 2em;
+  margin-bottom: 2em;
+  
+}
+
+#p1 {
+  grid-area: p1;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+ 
+}
+
+#p2 {
+  grid-area: p2;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+#p3 {
+  grid-area: p3;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+#p4 {
+  grid-area: p4;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+#product-header {
+
+}
+
+#product-header h1 {
+  font-size: var(--font-size-xl);
+  font-weight: normal;
+  margin: 0;
+}
+
+#product-header p {
+  margin: 0;
+}
+
+#limited-edition {
+  text-transform: uppercase;
+  font-weight: bold;
+  
+}
+
+#limited-edition-info {
+  font-size: var(--font-size-sm);
+}
+
+button {
+  background-color: black;
+  color: white;
+  padding-top: .75em;
+  padding-bottom: .75em;
+  padding-left: 1.5em;
+  padding-right: 1.5em;
+  border-radius: .5em;
+  font-size: var(--font-size-base);
+  cursor: pointer;
+}
+
+#dough h1 {
+  text-align: center;
+}
+
+#reviews {
+  background-color: black;
+  color: white;
+
+}
+
+.review {
+  display:block;
+  max-width: 45%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 2em;
+
+}
+
+#reviews h1 {
+  text-align: center;
+}
+
+.review p {
+  margin: 1em;
+}
+
+.names {
+  font-style: italic;
+}
+
+#flavours h1 {
+  text-align: center;
+}
+
+#product-card-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2em;
+}
+
+.product-card {
+  display: grid;
+  grid-template-rows: .6fr .15fr .15fr;
+  background-color: #f9f9f9;
+  border-radius: 1em;
+  text-align: center;
+}
+
+.product-card p {
+  margin: 0;
+}
+
+.product-card img {
+  border-top-right-radius: 1em;
+  border-top-left-radius: 1em;
+  
+}
+
+footer {
+  text-align: center;
+  padding-bottom: 3em;
+
+}
