@@ -62,7 +62,7 @@ header #menu ul {
 }
 
 header #menu li {
-  padding-right: 15px;
+  padding-right: 3em;
   font-size: var(--font-size-lg);
 }
 
